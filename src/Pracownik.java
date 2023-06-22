@@ -28,6 +28,7 @@ public class Pracownik extends Osoba{
         ileKursow++;
     }
 
+    @Override
     public String info(){
         StringBuilder info = new StringBuilder("Pracownik na stanowisku: " + stanowisko + "ukończył następujące kursy: ");
         for (int f1 = 0; f1 < ileKursow; f1++) info.append(ukonczoneKursy[f1]).append(", ");
@@ -35,6 +36,7 @@ public class Pracownik extends Osoba{
         return info.toString();
     }
 
+    @Override
     public double oblicz(){
         return poboryBrutto - poboryBrutto * ((double) 19 / 100);
     }

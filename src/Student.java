@@ -21,10 +21,13 @@ public class Student extends Osoba{
         oceny[ileOcen] = ocena;
         ileOcen++;
     }
+
+    @Override
     public String info(){
         return "Student kierunku: " + kierunek;
     }
 
+    @Override
     public double oblicz() {
         int sum = 0;
         for (double ocena : oceny) sum += ocena;
