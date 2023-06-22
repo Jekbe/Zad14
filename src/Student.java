@@ -1,38 +1,34 @@
 public class Student extends Osoba{
     private final String uczelnia, kierunek;
-    private final double[] oceny;
-    private int ileOcen;
+    private final double[] oceny = new double[5];
+    private int ileOcen = 0;
 
     public Student(String imie, String nazwisko, String miejscowosc, String uczelnia, String kierunek) {
         super(imie, nazwisko, miejscowosc);
         this.uczelnia = uczelnia;
         this.kierunek = kierunek;
-        this.oceny = new double[5];
-        this.ileOcen = 0;
     }
 
     public String getUczelnia() {
-        return this.uczelnia;
+        return uczelnia;
     }
 
     public String getKierunek() {
-        return this.kierunek;
+        return kierunek;
     }
 
     public void dodajOcene(double ocena){
-        this.oceny[this.ileOcen] = ocena;
-        this.ileOcen++;
+        oceny[ileOcen] = ocena;
+        ileOcen++;
     }
     public String info(){
-        return "Student kierunku: " + this.kierunek;
+        return "Student kierunku: " + kierunek;
     }
 
     public double oblicz() {
         int sum = 0;
-        for (double ocena : this.oceny){
-            sum += ocena;
-        }
+        for (double ocena : oceny) sum += ocena;
 
-        return (double) sum / this.ileOcen;
+        return (double) sum / ileOcen;
     }
 }

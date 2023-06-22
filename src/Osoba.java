@@ -8,15 +8,15 @@ public abstract class Osoba {
     }
 
     public String getImie() {
-        return this.imie;
+        return imie;
     }
 
     public String getNazwisko() {
-        return this.nazwisko;
+        return nazwisko;
     }
 
     public String getMiejscowosc() {
-        return this.miejscowosc;
+        return miejscowosc;
     }
 
     public abstract String info();
