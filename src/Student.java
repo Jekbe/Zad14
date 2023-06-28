@@ -1,12 +1,14 @@
 public class Student extends Osoba{
     private final String uczelnia, kierunek;
-    private final double[] oceny = new double[5];
-    private int ileOcen = 0;
+    private final double[] oceny;
+    private int ileOcen;
 
     public Student(String imie, String nazwisko, String miejscowosc, String uczelnia, String kierunek) {
         super(imie, nazwisko, miejscowosc);
         this.uczelnia = uczelnia;
         this.kierunek = kierunek;
+        oceny = new double[5];
+        ileOcen = 0;
     }
 
     public String getUczelnia() {
